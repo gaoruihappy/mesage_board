@@ -1,0 +1,17 @@
+html
+  head
+    title!= title
+    
+  body
+    h1!= message
+    form
+    input.ms
+    button.bt 添加留言
+    ul
+    div#a
+    form(id="formId",action='/postFormData',method='post',onsubmit="return save()")
+        input(name='content',type='hidden',value='this is a messageBoard')
+        input(name='_csrf',type='hidden',value!=_csrf)
+        input(type='submit',value='Sign Up') 
+    script(src="../jquery.js")
+    script(src="../xss.js")

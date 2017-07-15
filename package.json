@@ -1,0 +1,25 @@
+{
+  "name": "my_new_app",
+  "version": "1.0.0",
+  "description": "新的app",
+  "main": "index.js",
+  "scripts": {
+    "test": "123"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gaoruihappy"
+  },
+  "keywords": [
+    "234"
+  ],
+  "author": "gaorui",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.14.1",
+    "jade": "^1.11.0",
+    "mysql": "^2.13.0",
+    "qr-image": "^3.2.0"
+  }
+}
