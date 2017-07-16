@@ -24,21 +24,23 @@ app.get('/message', function (req, res) {
 		res.send('');
 		return;
 	}
+	//预防xss
 	if(req.query.message){
 		//添加''校验
 		req.query.message = req.query.message.replace(/</g,"&lt;"); 
 		req.query.message = req.query.message.replace(/>/g,"&gt;"); 
 		messageList.push(req.query.message);
 	}
+	// messageList.push(req.query.message);
     res.send(messageList);
 });
 app.post('/postFormData', function(req, res, next) {
   console.log(req.body);
-  if(req.body._csrf==random){
-  	res.send({error:0,text:"提交成功"})
-  }else{
-  	res.send({error:1,text:"提交失败"})
-  }
+  // if(req.body._csrf==random){
+  // 	res.send({error:0,text:"提交成功"})
+  // }else{
+  // 	res.send({error:1,text:"提交失败"})
+  // }
 })
 
 var server = app.listen(3000, function () {

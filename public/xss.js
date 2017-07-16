@@ -18,7 +18,8 @@ function getList(){
 getList();
 document.cookie="name=lianjiafe"
 // debugger
-var text = location.hash.replace('#','').replace(/</g,"&lt;").replace(/>/g,"&gt;"); 
+// var text = location.hash.replace('#','').replace(/</g,"&lt;").replace(/>/g,"&gt;"); 
+var text = location.hash.replace('#',''); 
 $('#a').html(text);
 // $('#a').html(location.hash.replace('#',''));
 $('.bt').on("click",function(){
