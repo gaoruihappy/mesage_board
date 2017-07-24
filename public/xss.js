@@ -16,11 +16,11 @@ function getList(){
     });
 }
 getList();
-document.cookie="name=lianjiafe"
-// debugger
+// document.cookie="name=lianjiafe"
+//预防xss 2,3
 // var text = location.hash.replace('#','').replace(/</g,"&lt;").replace(/>/g,"&gt;"); 
 var text = location.hash.replace('#',''); 
-$('#a').html(text);
+$('#a').append(text);
 // $('#a').html(location.hash.replace('#',''));
 $('.bt').on("click",function(){
 	getList();
